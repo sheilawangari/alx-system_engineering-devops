@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# prints list of contents in current working directory, showing only part of the name after the first dash
+for FILE in *
+do
+	echo "$FILE" | cut -d '-' -f2
+done

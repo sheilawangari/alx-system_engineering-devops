@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# changes `localhost` IP to `127.0.0.2` and `facebook.com` IP to `8.8.8.8`
+$ifconfig localhost 127.0.0.2
+$ifconfig facebook.com 8.8.8.8
+

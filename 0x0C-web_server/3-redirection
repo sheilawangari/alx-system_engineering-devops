@@ -1,11 +1,12 @@
-#!/usr/bin/env
-# redirect nginx server's `/redirect_me` to another page
-sudo apt-get update
-sudo apt-get install -y nginx
+#!/usr/bin/env bash
+# Serve a web page using nginx
+apt update -y
+apt install -y nginx
 
-ufw allow 'Nginx HTTP'
+echo "Holberton School" > /var/www/html/index.html
 
-echo 'Hello World!' > /var/www/html/index.html
+LINE="\\\trewrite ^/redirect_me https://github.com/elfinalist permanent;"
+sed -i "24i $LINE" /etc/nginx/sites-available/default
 
 service nginx restart
-
+:x

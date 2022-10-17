@@ -24,3 +24,4 @@ if __name__ == '__main__':
     print('Employee {} is done with tasks({}/{}):'
           .format(name, len(tasks_done), len(body)))
     print(*tasks_done, sep='\n')
+

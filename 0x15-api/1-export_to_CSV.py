@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+<<<<<<< HEAD
 """ For a given employee, returns information about the TODO list progress"""
 import csv
 import requests
@@ -26,3 +27,26 @@ if __name__ == '__main__':
             employee_writer.writerow([id_, name, todo['completed'],
                                       todo['title']])
                                       
+=======
+"""
+uses a REST API to return inforamtion about an employee given their
+employee ID
+"""
+import csv
+import requests
+import sys
+
+
+if __name__ == "__main__":
+    user_id = sys.argv[1]
+    url = "https://jsonplaceholder.typicode.com/"
+    user = requests.get(url + "users/{}".format(user_id)).json()
+    username = user.get("username")
+    todos = requests.get(url + "todos", params={"userId": user_id}).json()
+
+    with open("{}.csv".format(user_id), "w", newline="") as csvfile:
+        writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+        [writer.writerow(
+            [user_id, username, t.get("completed"), t.get("title")]
+        ) for t in todos] 
+>>>>>>> d3252d752b4991d0402ac65d8849513fdc631b06

@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 #!/usr/bin/env bash
 # Debugging apache web server
 sudo /etc/init.d/apache2 restart
 
+=======
+<<<<<<< HEAD
+#!/usr/bin/env bash
+# Debugging apache web server
+sudo /etc/init.d/apache2 restart
+=======
+#!/usr/bin/env bash
+# Debugging apache web server
+sudo /etc/init.d/apache2 restart
+
+>>>>>>> debad9b13ba3f9921a5512a62d05aafd4111bcc1
+>>>>>>> d3252d752b4991d0402ac65d8849513fdc631b06
